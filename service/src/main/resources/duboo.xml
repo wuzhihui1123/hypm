@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	    http://code.alibabatech.com/schema/dubbo  http://code.alibabatech.com/schema/dubbo/dubbo.xsd"
+       default-lazy-init="true">
+
+    <dubbo:application name="hypm-service"/>
+
+    <dubbo:registry protocol="${dubbo.registry.protocol}" address="${dubbo.registry.address}"/>
+
+    <dubbo:protocol name="${dubbo.service.protocol}" port="${dubbo.service.port}"/>
+
+    <dubbo:service interface="cn.ifactory.hypm.facade.service.AttachmentService" ref="attachmentService"/>
+    <dubbo:service interface="cn.ifactory.hypm.facade.service.ImageService" ref="imageService"/>
+    <dubbo:service interface="cn.ifactory.hypm.facade.service.LogService" ref="logService"/>
+    <dubbo:service interface="cn.ifactory.hypm.facade.service.SpeechCommentService" ref="speechCommentService"/>
+    <dubbo:service interface="cn.ifactory.hypm.facade.service.SpeechService" ref="speechService"/>
+    <dubbo:service interface="cn.ifactory.hypm.facade.service.UserService" ref="userService"/>
+    <dubbo:service interface="cn.ifactory.hypm.facade.service.NodeService" ref="nodeService"/>
+
+</beans>
