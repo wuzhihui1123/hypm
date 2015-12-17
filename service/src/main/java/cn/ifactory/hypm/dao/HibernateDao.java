@@ -5,7 +5,6 @@ import org.apache.commons.lang3.StringUtils;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 import java.lang.reflect.ParameterizedType;
@@ -29,7 +28,8 @@ public abstract class  HibernateDao<T> extends BaseDao<T>{
 	
 	@Override
 	public T save(T t) {
-		return (T)getSession().save(t);
+		String id = (String)getSession().save(t);
+		return get(id);
 		
 	}
 
