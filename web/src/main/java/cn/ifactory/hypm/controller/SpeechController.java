@@ -49,7 +49,7 @@ public class SpeechController  {
 		speech.setUser(currUser);
 
 		speech.setNode(node);
-		speechService.save(speech);
+		speech = speechService.save(speech);
 		if(attachments != null) {
 			for(MultipartFile file : attachments) {
 				if(!file.isEmpty()){

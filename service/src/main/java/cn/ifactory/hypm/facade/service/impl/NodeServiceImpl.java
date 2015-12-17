@@ -17,8 +17,8 @@ public class NodeServiceImpl implements NodeService {
     @Resource(name = "nodeDao")
     private NodeDao nodeDao;
 
-    public void save(Node node) {
-        nodeDao.save(node);
+    public Node save(Node node) {
+        return nodeDao.save(node);
     }
 
     public Node get(String id) {

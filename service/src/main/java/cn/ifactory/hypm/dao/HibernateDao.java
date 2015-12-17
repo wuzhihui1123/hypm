@@ -28,8 +28,8 @@ public abstract class  HibernateDao<T> extends BaseDao<T>{
 	protected Class<?> entityClass = this.getSuperClassGenricType();
 	
 	@Override
-	public void save(T t) {
-		getSession().save(t);
+	public T save(T t) {
+		return (T)getSession().save(t);
 		
 	}
 
@@ -196,7 +196,6 @@ public abstract class  HibernateDao<T> extends BaseDao<T>{
 	
 	/**
 	 * 获取父类的第一个类泛型参数的类型
-	 * @param clazz
 	 * @return
 	 */
 	private <T> Class<T> getSuperClassGenricType() {

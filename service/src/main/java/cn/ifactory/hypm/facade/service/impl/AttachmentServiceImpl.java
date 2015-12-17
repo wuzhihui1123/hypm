@@ -16,8 +16,8 @@ import java.util.Map;
 public class AttachmentServiceImpl implements AttachmentService {
 	@Resource(name="attachmentDao")
 	private AttachmentDao attachmentDao;
-	public void save(Attachment attachment) {
-		attachmentDao.save(attachment);
+	public Attachment save(Attachment attachment) {
+		return attachmentDao.save(attachment);
 	}
 
 	public Attachment get(String id) {

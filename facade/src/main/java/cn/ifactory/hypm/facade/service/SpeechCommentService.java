@@ -6,8 +6,8 @@ import cn.ifactory.hypm.entity.SpeechComment;
 import java.util.List;
 
 public interface SpeechCommentService {
-	
-	void save(SpeechComment speechComment);
+
+	SpeechComment save(SpeechComment speechComment);
 	
 	SpeechComment get(String id);
 	

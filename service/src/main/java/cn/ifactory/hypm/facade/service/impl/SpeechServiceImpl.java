@@ -19,8 +19,8 @@ public class SpeechServiceImpl implements SpeechService{
 	@Resource(name="speechDao")
 	private SpeechDao speechDao;
 
-	public void save(Speech speech) {
-		speechDao.save(speech);
+	public Speech save(Speech speech) {
+		return speechDao.save(speech);
 	}
 
 	public Speech get(String id) {

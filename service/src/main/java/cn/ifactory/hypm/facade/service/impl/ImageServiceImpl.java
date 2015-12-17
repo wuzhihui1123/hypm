@@ -13,8 +13,8 @@ public class ImageServiceImpl implements ImageService {
 
 	@Resource(name="imageDao")
 	private ImageDao imageDao;
-	public void save(Image image) {
-		imageDao.save(image);
+	public Image save(Image image) {
+		return imageDao.save(image);
 	}
 
 	public Image get(String id) {

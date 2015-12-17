@@ -5,8 +5,8 @@ import cn.ifactory.hypm.entity.Node;
 import java.util.Collection;
 
 public interface NodeService {
-	
-	void save(Node node);
+
+	Node save(Node node);
 	
 	Node get(String id);
 	

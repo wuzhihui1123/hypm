@@ -6,8 +6,8 @@ import cn.ifactory.hypm.entity.Speech;
 import java.util.List;
 
 public interface SpeechService {
-	
-	void save(Speech speech);
+
+	Speech save(Speech speech);
 	
 	Speech get(String id);
 	

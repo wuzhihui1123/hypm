@@ -5,8 +5,8 @@ import cn.ifactory.hypm.entity.Log;
 import java.util.List;
 
 public interface LogService {
-	
-	void save(Log log);
+
+	Log save(Log log);
 	
 	Log get(String id);
 	

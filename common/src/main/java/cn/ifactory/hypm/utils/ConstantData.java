@@ -43,17 +43,18 @@ public class ConstantData {
 			}
 		}
 		
-		try{
-			Properties prop = new Properties();
-			InputStream is = ConstantData.class.getClassLoader().getResourceAsStream("config.properties");
-			prop.load(is);
-			ret = (String)prop.get("attach_dir_path");
-			if(StringUtils.isBlank(ret)) {
-				throw new RuntimeException("附件路径找不到，使用默认路径");
-			}
-		}catch(Exception e) {
-			ret = defaultPath;
-		}
+//		try{
+//			Properties prop = new Properties();
+//			InputStream is = ConstantData.class.getClassLoader().getResourceAsStream("config.properties");
+//			prop.load(is);
+//			ret = (String)prop.get("attach_dir_path");
+//			if(StringUtils.isBlank(ret)) {
+//				throw new RuntimeException("附件路径找不到，使用默认路径");
+//			}
+//		}catch(Exception e) {
+//			ret = defaultPath;
+//		}
+		ret = defaultPath;
 		if(!ret.endsWith("/") && !ret.endsWith("\\")) {
 			ret = ret + "/";
 		}

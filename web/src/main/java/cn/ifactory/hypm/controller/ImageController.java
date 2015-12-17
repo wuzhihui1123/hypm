@@ -36,7 +36,7 @@ public class ImageController  {
 				Image image = new Image();
 				image.setName(imgFile.getOriginalFilename());
 				image.setDatas(imgFile.getBytes());
-				imageService.save(image);
+				image = imageService.save(image);
 				ret.put("state", "SUCCESS");
 				ret.put("url", request.getContextPath() + "/image/read.jhtml?id=" + image.getId());
 				ret.put("title", imgFile.getOriginalFilename());

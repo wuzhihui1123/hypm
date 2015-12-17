@@ -72,7 +72,7 @@ public class NodeController  {
 		
 		if(StringUtils.isBlank(node.getId())) {//新增
 			node.setParent(nodeService.get(parentId));
-			nodeService.save(node);
+			node = nodeService.save(node);
 			logService.save(new Log(String.format("%s[%s]", Log.TargetObj.NODE.getName(),node.getName()), String.format("%s | %s", currUser.getNickname(),currUser.getUsername()) , Log.OperateType.ADD, String.format("[id:%s]",node.getId())));
 		}else {
 			node.setParent(nodeService.get(node.getId()).getParent());

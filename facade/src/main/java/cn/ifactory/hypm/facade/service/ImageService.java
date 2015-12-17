@@ -3,8 +3,8 @@ package cn.ifactory.hypm.facade.service;
 import cn.ifactory.hypm.entity.Image;
 
 public interface ImageService {
-	
-	void save(Image image);
+
+	Image save(Image image);
 	
 	Image get(String id);
 	

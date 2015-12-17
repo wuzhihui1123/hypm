@@ -16,11 +16,11 @@ public class RegisterController {
 	private UserService userService;
 	
 	@RequestMapping(value="/register.jhtml",method=RequestMethod.GET)
-	public String login(HttpServletRequest request) {
+	public String register(HttpServletRequest request) {
 		return "common/register";
 	}
 	@RequestMapping(value="/register.jhtml",method=RequestMethod.POST)
-	public String login(User user,Model model) {
+	public String register(User user,Model model) {
 		try{
 			model.addAttribute("user", user);
 			User dbUser = userService.findByUsername(user.getUsername());

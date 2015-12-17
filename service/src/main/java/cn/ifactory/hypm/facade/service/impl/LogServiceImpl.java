@@ -14,8 +14,8 @@ public class LogServiceImpl implements LogService {
 	@Resource(name="logDao")
 	private LogDao logDao;
 	
-	public void save(Log log) {
-		logDao.save(log);
+	public Log save(Log log) {
+		return logDao.save(log);
 	}
 
 	public Log get(String id) {

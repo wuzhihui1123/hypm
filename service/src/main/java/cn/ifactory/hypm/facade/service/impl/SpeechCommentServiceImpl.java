@@ -18,8 +18,8 @@ public class SpeechCommentServiceImpl implements SpeechCommentService{
 	@Resource(name="speechCommentDao")
 	private SpeechCommentDao commentDao;
 
-	public void save(SpeechComment speechComment) {
-		commentDao.save(speechComment);
+	public SpeechComment save(SpeechComment speechComment) {
+		return commentDao.save(speechComment);
 	}
 
 	public SpeechComment get(String id) {

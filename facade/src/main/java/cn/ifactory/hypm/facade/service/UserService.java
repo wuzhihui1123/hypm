@@ -5,8 +5,8 @@ import cn.ifactory.hypm.entity.User;
 import java.util.List;
 
 public interface UserService {
-	
-	void save(User user);
+
+	User save(User user);
 	
 	User get(String id);
 	

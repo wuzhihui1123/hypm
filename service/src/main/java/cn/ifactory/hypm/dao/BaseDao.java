@@ -15,7 +15,7 @@ public abstract class BaseDao<T> {
 	 * 
 	 * @param t
 	 */
-	public abstract void save(T t);
+	public abstract T save(T t);
 
 	/**
 	 * 删除实体
@@ -27,7 +27,6 @@ public abstract class BaseDao<T> {
 	/**
 	 * 通过主键id删除实体
 	 * 
-	 * @param entityClass
 	 * @param id
 	 */
 	public abstract void delete(String id);
@@ -41,7 +40,6 @@ public abstract class BaseDao<T> {
 	/**
 	 * 通过主键id获取实体实例
 	 * 
-	 * @param entityClass
 	 * @param id
 	 * @return
 	 */

@@ -6,8 +6,8 @@ import cn.ifactory.hypm.entity.Speech;
 import java.util.List;
 
 public interface AttachmentService {
-	
-	void save(Attachment attachment);
+
+	Attachment save(Attachment attachment);
 	
 	Attachment get(String id);
 	
