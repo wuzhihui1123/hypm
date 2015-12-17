@@ -10,12 +10,12 @@
 
     <dubbo:registry protocol="${dubbo.registry.protocol}" address="${dubbo.registry.address}"/>
 
-    <dubbo:reference interface="cn.ifactory.hypm.facade.service.AttachmentService" id="attachmentService" check="true" timeout="10000"/>
-    <dubbo:reference interface="cn.ifactory.hypm.facade.service.ImageService" id="imageService" check="true"/>
+    <dubbo:reference interface="cn.ifactory.hypm.facade.service.AttachmentService" id="attachmentService" check="true" timeout="3000"/>
+    <dubbo:reference interface="cn.ifactory.hypm.facade.service.ImageService" id="imageService" check="true" timeout="3000"/>
     <dubbo:reference interface="cn.ifactory.hypm.facade.service.LogService" id="logService" check="true"/>
     <dubbo:reference interface="cn.ifactory.hypm.facade.service.SpeechCommentService" id="speechCommentService" check="true"/>
     <dubbo:reference interface="cn.ifactory.hypm.facade.service.SpeechService" id="speechService"/>
-    <dubbo:reference interface="cn.ifactory.hypm.facade.service.UserService" id="userService" check="true" timeout="10000"/>
+    <dubbo:reference interface="cn.ifactory.hypm.facade.service.UserService" id="userService" check="true"/>
     <dubbo:reference interface="cn.ifactory.hypm.facade.service.NodeService" id="nodeService"/>
 
 </beans>
