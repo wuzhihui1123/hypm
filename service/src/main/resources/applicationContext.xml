@@ -63,5 +63,4 @@
 		<property name="minEvictableIdleTimeMillis" value="3600000" />
 	</bean>
 
-	<import resource="duboo.xml"/>
 </beans>

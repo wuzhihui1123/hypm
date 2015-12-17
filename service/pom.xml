@@ -123,6 +123,17 @@
 
     <build>
         <finalName>hypm-service</finalName>
+
+        <resources>
+            <!--把spring资源文件放入到dubbo默认加载的目录位置中-->
+            <resource>
+                <directory>src/main/resources</directory>
+                <targetPath>${project.build.directory}/classes/META-INF/spring</targetPath>
+                <includes>
+                    <include>**/*.xml</include>
+                </includes>
+            </resource>
+        </resources>
         <plugins>
             <!-- 打包jar文件时，配置manifest文件，加入lib包的jar依赖 -->
             <plugin>
